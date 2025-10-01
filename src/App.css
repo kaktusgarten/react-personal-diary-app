@@ -1,3 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui";
+/* Hier werden die Erlaubten Themes benannt und dann im <html>-Tag eingebunden mit data-theme="dark" z.B.. */
+/* bei dark kann man dann noch weiter auswählen was bei dark für ein dunkles Template angezeigt werden soll */
+@plugin "daisyui" {
+  themes: retro, abyss, halloween, dark, nord;
+}
 @import "./styles/styles.css";

@@ -1,5 +1,7 @@
 import { useState } from "react";
 import DialogModal from "../components/DialogModal";
+import DiaryEntryComponent from "../components/DiaryEntryComponent";
+import FullInfoModal from "../components/FullInfoModal";
 
 const HomePage = () => {
   return (
@@ -8,21 +10,10 @@ const HomePage = () => {
         <div className="mb-5 flex justify-between flex-wrap">
           <h2>Tagebucheinträge:</h2>
           <DialogModal />
+          <FullInfoModal />
         </div>
         <div>
-          <article className="border p-3 flex gap-3">
-            <div>
-              <img
-                scr="/"
-                alt="IMG"
-                className="w-[100px] h-[100px] border"
-              ></img>
-            </div>
-            <div>
-              <h2 className="text-2xl pb-2">Titel</h2>
-              <p>Datum</p>
-            </div>
-          </article>
+          <DiaryEntryComponent />
         </div>
       </div>
     </>
