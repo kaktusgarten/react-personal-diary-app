@@ -1,6 +1,6 @@
 import EingabeFormular from "./EingabeFormular";
 
-export default function () {
+export default function DialogModal() {
   return (
     <>
       {/* You can open the modal using document.getElementById('dialogFormEintrag').showModal() method */}
