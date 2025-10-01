@@ -3,6 +3,9 @@ import DialogModal from "../components/DialogModal";
 import DiaryEntryComponent from "../components/DiaryEntryComponent";
 import FullInfoModal from "../components/FullInfoModal";
 
+
+
+
 const HomePage = () => {
   return (
     <>
