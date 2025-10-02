@@ -18,14 +18,14 @@ export default function HomePage() {
       const initialEntries = [
         {
           title: "Heute war tolles Wetter",
-          datum: "12.12.2027",
-          text: "Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen. Manchmal benutzt man Worte wie Hamburgefonts, Rafgenduks oder Handgloves, um Schriften zu testen. Manchmal Sätze, die alle Buchstaben des Alphabets enthalten ",
+          datum: "02.10.2025",
+          text: "Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen, der uns nach seinem Bilde schuf, das Wehen des Alliebenden, der uns in ewiger Wonne schwebend trägt und erhält; mein Freund! Wenn's dann um meine Augen dämmert, und die Welt..",
           url: "/img/vite.svg",
         },
         {
           title: "Ich finde das Wetter war heute nicht so toll",
-          datum: "12.12.2017",
-          text: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. ",
+          datum: "2.10.2017",
+          text: "Es regnet in Strömen, die Straßen glänzen wie frisch poliertes Silber, und ich stehe mit einem viel zu kleinen Regenschirm da, der mehr Tropfen durchlässt als abwehrt. Der Wind spielt verrückt, meine Frisur ist ein Haufen Chaos, und meine Schuhe quaken fröhlich bei jedem Schritt. Trotzdem grinse ich – schlechtes Wetter hat seinen Charme. Es zwingt einen, langsamer zu gehen, die kleinen Dinge zu bemerken, wie das Plätschern in den Rinnsteinen oder den Duft von nassem Asphalt. Und während alle fluchen, genieße ich meinen Kaffee und lache über die launische Natur.",
           url: "/img/vite.svg",
         },
       ];
