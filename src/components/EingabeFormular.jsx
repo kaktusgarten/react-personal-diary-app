@@ -1,12 +1,13 @@
 import { useState } from "react";
 
-export default function () {
-  const handleSubmit = () => {
+export default function EingabeFormular() {
+  const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Submit");
   };
 
-  const handleChange = () => {
+  const handleChange = (e) => {
+    e.preventDefault();
     console.log("Handle Change");
   };
 

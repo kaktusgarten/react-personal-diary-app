@@ -14,9 +14,6 @@ export default function DiaryEntryComponent() {
 
   const { localStorageData } = use(FullPageContext);
 
-  console.log("localStorageData");
-  console.log(localStorageData);
-
   return (
     <>
       <div>
