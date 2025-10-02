@@ -20,25 +20,25 @@ export default function DiaryEntryComponent() {
   return (
     <>
       <div>
-        {localStorageData.map((e, index) => (
+        {localStorageData.map((article, index) => (
           <article
             key={index}
-            data-id="ID-des-articles-fehlt-noch"
-            className="border p-3 flex gap-3 rounded-xl cursor-pointer"
+            data-id={index}
+            className="border p-3 flex gap-3 rounded-xl cursor-pointer mb-3"
             onClick={(e) => {
               showInfo(e);
             }}
           >
             <div>
               <img
-                scr="/"
+                src={article.url}
                 alt="IMG"
                 className="w-[100px] h-[100px] border"
               ></img>
             </div>
             <div>
-              <h2 className="text-2xl pb-2">Titel</h2>
-              <p>Datum</p>
+              <p>{article.datum}</p>
+              <h2 className="text-2xl pb-2">{article.title}</h2>
             </div>
           </article>
         ))}

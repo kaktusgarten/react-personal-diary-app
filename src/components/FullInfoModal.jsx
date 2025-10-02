@@ -2,7 +2,8 @@ import { use } from "react";
 import { FullPageContext } from "../context/FullPageContext";
 
 export default function FullInfoModal({ id }) {
-  const { articleId, setArticleId } = use(FullPageContext);
+  const { articleId, setArticleId, localStorageData } = use(FullPageContext);
+  const currentArticle = localStorageData[Number(articleId)];
 
   return (
     <>
@@ -10,15 +11,33 @@ export default function FullInfoModal({ id }) {
 
       <dialog id="fullInfoModal" className="modal">
         <div className="modal-box w-11/12 max-w-5xl">
-          <h3 className="font-bold text-lg mb-5">Tagebuch Eintrag:</h3>
+          <h3 className="font-bold text-lg mb-5">
+            Tagebuch Eintrag {articleId}:
+          </h3>
 
-          <p>Das ist alles passiert, Eintrag-ID : {articleId}</p>
-
-          <div className="modal-action">
-            <form method="dialog">
-              <button className="btn">Close</button>
-            </form>
-          </div>
+          <article>
+            <div className="flex gap-4 sm:flex-row flex-col">
+              {/* Image */}
+              <img
+                src={currentArticle?.url}
+                alt="Image"
+                className="border sm:w-1/3"
+              ></img>
+              <div className="sm:w-2/3">
+                {/* Datum */}
+                <p className="mb-2">Datum: {currentArticle?.datum}</p>
+                {/* Titel */}
+                <h2 className="text-2xl mb-3">{currentArticle?.title}</h2>
+                {/* Text */}
+                <p>{currentArticle?.text}</p>
+              </div>
+            </div>
+            <div className="modal-action">
+              <form method="dialog">
+                <button className="btn">Close</button>
+              </form>
+            </div>
+          </article>
         </div>
       </dialog>
     </>

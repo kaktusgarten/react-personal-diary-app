@@ -43,15 +43,16 @@ export default function () {
             placeholder="URL eingeben"
           />
           {/* BILD */}
-          <fieldset className="fieldset">
+          {/* <fieldset className="fieldset">
             <legend className="fieldset-legend">Bild auswählen</legend>
             <input name="image" type="file" className="file-input" />
             <label className="label">Max size 2MB</label>
-          </fieldset>
+          </fieldset> */}
 
           {/* TEXTAREA */}
           <label className="label">Text</label>
           <textarea
+            name="text"
             className="textarea w-full"
             placeholder="Gib einen Text ein"
           />
