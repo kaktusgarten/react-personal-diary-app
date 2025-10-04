@@ -23,31 +23,35 @@ export default function DiaryEntryComponent() {
   return (
     <>
       <div>
-        {localStorageData.map((article, index) => (
-          <article
-            key={index}
-            data-id={index}
-            className="border p-3 flex gap-3 rounded-xl cursor-pointer mb-3"
-            onClick={(e) => {
-              showInfo(e);
-            }}
-          >
-            <div>
-              <img
-                src={article.url ? article.url : "/img/react.svg"}
-                onError={(e) => {
-                  e.currentTarget.src = "/img/vite.svg";
-                }}
-                alt="IMG"
-                className="w-[100px] h-[100px] border"
-              ></img>
-            </div>
-            <div>
-              <p>{article.datum}</p>
-              <h2 className="text-2xl pb-2">{article.title}</h2>
-            </div>
-          </article>
-        ))}
+        {localStorageData.map((article, index) => {
+          // Datum formatieren: "YYYY-MM-DD" → "DD.MM.YYYY"
+          const [year, month, day] = article.datum.split("-");
+          const formattedDate = `${day}.${month}.${year}`;
+
+          return (
+            <article
+              key={index}
+              data-id={index}
+              className="border p-3 flex gap-3 rounded-xl cursor-pointer mb-3"
+              onClick={showInfo}
+            >
+              <div>
+                <img
+                  src={article.url ? article.url : "/img/react.svg"}
+                  onError={(e) => {
+                    e.currentTarget.src = "/img/vite.svg";
+                  }}
+                  alt="IMG"
+                  className="w-[100px] h-[100px] border"
+                />
+              </div>
+              <div>
+                <p>{formattedDate}</p>
+                <h2 className="text-2xl pb-2">{article.title}</h2>
+              </div>
+            </article>
+          );
+        })}
       </div>
       <div>
         <button

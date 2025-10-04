@@ -5,10 +5,15 @@ export default function FullInfoModal({ id }) {
   const { articleId, localStorageData } = use(FullPageContext);
   const currentArticle = localStorageData[Number(articleId)];
 
+  // Datum formatieren: "YYYY-MM-DD" → "DD.MM.YYYY", nur wenn currentArticle existiert
+  let formattedDate = "";
+  if (currentArticle?.datum) {
+    const [year, month, day] = currentArticle.datum.split("-");
+    formattedDate = `${day}.${month}.${year}`;
+  }
+
   return (
     <>
-      {/* You can open the modal using document.getElementById(fullInfoModal').showModal() method */}
-
       <dialog id="fullInfoModal" className="modal">
         <div className="modal-box w-11/12 max-w-5xl">
           <h3 className="font-bold text-lg mb-5">
@@ -30,7 +35,7 @@ export default function FullInfoModal({ id }) {
               ></img>
               <div className="sm:w-2/3">
                 {/* Datum */}
-                <p className="mb-2">Datum: {currentArticle?.datum}</p>
+                <p className="mb-2">Datum: {formattedDate}</p>
                 {/* Titel */}
                 <h2 className="text-2xl mb-3">{currentArticle?.title}</h2>
                 {/* Text */}
