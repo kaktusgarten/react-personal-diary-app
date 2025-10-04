@@ -4,7 +4,7 @@ const AboutPage = () => {
       <h2 className="text-4xl mb-4">Über diese Projekt</h2>
 
       <h3 className="mb-4 text-xl">
-        Eingesetzt wurden folgende Komponenten und Techniken:
+        1. Eingesetzt wurden folgende Komponenten und Techniken:
       </h3>
       <p>
         VITE - REACT - useEffect(), useState(), createContext(), use(),
