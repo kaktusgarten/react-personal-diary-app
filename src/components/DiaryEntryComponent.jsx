@@ -42,7 +42,7 @@ export default function DiaryEntryComponent() {
                     e.currentTarget.src = "/img/vite.svg";
                   }}
                   alt="IMG"
-                  className="w-[100px] h-[100px] border"
+                  className="w-[100px] h-[100px] border p-1"
                 />
               </div>
               <div>

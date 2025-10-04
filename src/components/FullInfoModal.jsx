@@ -31,7 +31,7 @@ export default function FullInfoModal({ id }) {
                   e.currentTarget.src = "/img/vite.svg";
                 }}
                 alt="Image"
-                className="border sm:w-1/3"
+                className="border sm:w-1/3 p-3"
               ></img>
               <div className="sm:w-2/3">
                 {/* Datum */}
