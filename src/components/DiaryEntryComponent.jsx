@@ -2,7 +2,8 @@ import { use } from "react";
 import { FullPageContext } from "../context/FullPageContext";
 
 export default function DiaryEntryComponent() {
-  const { setArticleId } = use(FullPageContext);
+  const { setArticleId, setLocalStorageData, localStorageData } =
+    use(FullPageContext);
 
   // Open Info Popup
   const showInfo = (e) => {
@@ -12,7 +13,12 @@ export default function DiaryEntryComponent() {
     document.getElementById("fullInfoModal").showModal();
   };
 
-  const { localStorageData } = use(FullPageContext);
+  const deleteEntries = (e) => {
+    console.log("löschen");
+    console.log(localStorageData);
+    setLocalStorageData([]);
+    localStorage.removeItem("diaryEntries");
+  };
 
   return (
     <>
@@ -42,6 +48,16 @@ export default function DiaryEntryComponent() {
             </div>
           </article>
         ))}
+      </div>
+      <div>
+        <button
+          className="btn"
+          onClick={(e) => {
+            deleteEntries();
+          }}
+        >
+          Alle Einträge löschen
+        </button>
       </div>
     </>
   );

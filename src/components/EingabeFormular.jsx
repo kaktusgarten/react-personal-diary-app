@@ -14,20 +14,33 @@ export default function EingabeFormular() {
     // VALIDIERUNG **********
     const validate = (data) => {
       const newErrors = {};
-      if (!data.title.trim()) newErrors.title = "Bitte einen Titel eingeben.";
-      if (!data.text.trim()) newErrors.text = "Bitte einen Text eingeben.";
-      if (!data.datum.trim()) newErrors.datum = "Bitte ein Datum eingeben.";
-      // if (!data.url.trim()) newErrors.url = "Bitte eine Bild-URL eingeben.";
-      console.log("Errors");
-      console.log(newErrors);
+
+      if (!data.title.trim()) {
+        newErrors.title = "Bitte einen Titel eingeben.";
+      }
+      if (!data.text.trim()) {
+        newErrors.text = "Bitte einen Text eingeben.";
+      }
+      if (!data.datum.trim()) {
+        newErrors.datum = "Bitte ein Datum eingeben.";
+      } else {
+        // Prüfen, ob Datum schon existiert
+        const exists = localStorageData.some(
+          (entry) => entry.datum === data.datum
+        );
+        if (exists) {
+          newErrors.datum = "Für dieses Datum existiert bereits ein Eintrag.";
+        }
+      }
+
       return newErrors;
     };
+
     const validationErrors = validate(data);
 
     // IF..ELSE..
     if (Object.keys(validationErrors).length === 0) {
-      // Keine Fehler?
-      // Dann ABSENDEN:
+      // Keine Fehler? // Dann ABSENDEN:
       await new Promise((resolve) => {
         setTimeout(resolve, 1000);
       });
@@ -49,6 +62,10 @@ export default function EingabeFormular() {
           data.url = "/img/vite.svg";
         }
       }
+      // Datum von YYYY-MM-DD nach DD.MM.YYYY konvertieren
+      // const [year, month, day] = data.datum.split("-");
+      // data.datum = `${day}.${month}.${year}`;
+
       // **********************************
       // Speichern im local Storage
       const toLocalStorage = JSON.stringify([...localStorageData, data]);
