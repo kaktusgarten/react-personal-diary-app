@@ -2,7 +2,7 @@ import { use } from "react";
 import { FullPageContext } from "../context/FullPageContext";
 
 export default function FullInfoModal({ id }) {
-  const { articleId, setArticleId, localStorageData } = use(FullPageContext);
+  const { articleId, localStorageData } = use(FullPageContext);
   const currentArticle = localStorageData[Number(articleId)];
 
   return (
@@ -19,7 +19,12 @@ export default function FullInfoModal({ id }) {
             <div className="flex gap-4 sm:flex-row flex-col">
               {/* Image */}
               <img
-                src={currentArticle?.url}
+                src={
+                  currentArticle?.url ? currentArticle?.url : "/img/react.svg"
+                }
+                onError={(e) => {
+                  e.currentTarget.src = "/img/vite.svg";
+                }}
                 alt="Image"
                 className="border sm:w-1/3"
               ></img>

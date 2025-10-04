@@ -28,7 +28,10 @@ export default function DiaryEntryComponent() {
           >
             <div>
               <img
-                src={article.url}
+                src={article.url ? article.url : "/img/react.svg"}
+                onError={(e) => {
+                  e.currentTarget.src = "/img/vite.svg";
+                }}
                 alt="IMG"
                 className="w-[100px] h-[100px] border"
               ></img>
