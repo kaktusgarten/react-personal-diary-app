@@ -6,7 +6,7 @@ const AboutPage = () => {
       <h3 className="mb-6 text-xl">
         1. Eingesetzt wurden folgende Komponenten und Techniken:
       </h3>
-      <ul class="grid grid-cols-2 gap-2 list-disc pl-5 text-2xl">
+      <ul className="grid sm:grid-cols-2 sm:gap-2 list-disc pl-5 text-2xl overflow-auto">
         <li>VITE</li>
         <li>REACT</li>
         <li>useEffect()</li>
