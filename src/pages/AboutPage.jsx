@@ -15,6 +15,7 @@ const AboutPage = () => {
         <li>use()</li>
         <li>react-router()</li>
         <li>useActionState()</li>
+        <li>localStorage (Browser Storage)</li>
         <li>tailwindCss</li>
         <li>DaisyUiCss</li>
         <li>VanillaJS</li>
