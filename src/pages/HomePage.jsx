@@ -28,6 +28,12 @@ export default function HomePage() {
           text: "Es regnet in Strömen, die Straßen glänzen wie frisch poliertes Silber, und ich stehe mit einem viel zu kleinen Regenschirm da, der mehr Tropfen durchlässt als abwehrt. Der Wind spielt verrückt, meine Frisur ist ein Haufen Chaos, und meine Schuhe quaken fröhlich bei jedem Schritt. Trotzdem grinse ich – schlechtes Wetter hat seinen Charme. Es zwingt einen, langsamer zu gehen, die kleinen Dinge zu bemerken, wie das Plätschern in den Rinnsteinen oder den Duft von nassem Asphalt. Und während alle fluchen, genieße ich meinen Kaffee und lache über die launische Natur.",
           url: "/img/react.svg",
         },
+        {
+          title: "Der Hund ist weg",
+          datum: "2025-09-01",
+          text: "Der Hund ist weg. Eben war er noch da – mitten im Wohnzimmer, stolz wie ein König mit der Fernbedienung im Maul. Dann ein leises „Klack“ der Tür, ein wedelnder Schatten… und schwupps! Spurlose Verdunstung. Wir suchten überall: unter dem Sofa (nur Staubmonster), im Kühlschrank (kein Hund, aber Käse), sogar im Wäschekorb (da lag nur Opa’s Pullover). Schließlich fanden wir ihn – nicht im Park, nicht bei den Nachbarn – sondern gemütlich auf dem Fahrersitz meines Autos. Motor an, Blick nach vorne. Offenbar hatte er beschlossen, selbst Gassi zu fahren. Ab jetzt: Autoschlüssel besser verstecken.",
+          url: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRqC8wvz4gS3CIvkKZ-DBq0PbSeV2xn1Nhzo_6Jl5ZHbsQ-EZludTh0kQXbTjsReBzh6H0mKraNUXi4ArEW1DlzMEtFokzNc5RaKuUukno",
+        },
       ];
       localStorage.setItem("diaryEntries", JSON.stringify(initialEntries));
     }
