@@ -35,7 +35,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="HOMEPAGE border p-5">
+      <div className="HOMEPAGE p-5">
         <div className="mb-5 flex justify-between flex-wrap">
           <h2>Tagebucheinträge:</h2>
           <DialogModal />
