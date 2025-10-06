@@ -32,7 +32,7 @@ export default function DiaryEntryComponent() {
             <article
               key={index}
               data-id={index}
-              className="border p-3 flex gap-3 rounded-xl cursor-pointer mb-3 bg-[#000000]"
+              className="border p-3 flex gap-3 rounded-xl cursor-pointer mb-3 bg-[#000000] sm:flex-row flex-col"
               onClick={showInfo}
             >
               <div>
