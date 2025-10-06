@@ -5,7 +5,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="p-4 bg-black">
+      <header className="p-4 bg-black overflow-auto">
         <h1 className="text-3xl">{title}</h1>
         {/* Navigation! */}
         <nav className="my-5">
