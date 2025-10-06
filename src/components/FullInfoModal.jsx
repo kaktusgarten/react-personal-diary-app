@@ -21,7 +21,7 @@ export default function FullInfoModal({ id }) {
           </h3>
 
           <article>
-            <div className="flex gap-4 sm:flex-row flex-col">
+            <div className="flex gap-4 sm:flex-row flex-col items-start">
               {/* Image */}
               <img
                 src={
@@ -31,7 +31,7 @@ export default function FullInfoModal({ id }) {
                   e.currentTarget.src = "/img/vite.svg";
                 }}
                 alt="Image"
-                className="border sm:w-1/3 p-3"
+                className="border sm:w-1/3 p-3 object-contain"
               ></img>
               <div className="sm:w-2/3">
                 {/* Datum */}
@@ -42,9 +42,11 @@ export default function FullInfoModal({ id }) {
                 <p>{currentArticle?.text}</p>
               </div>
             </div>
-            <div className="modal-action">
+            {/* // BUTTONS */}
+            <div className="flex justify-between mt-5">
+              <button className="btn text-red-500">Eintrag Löschen</button>
               <form method="dialog">
-                <button className="btn">Close</button>
+                <button className="btn px-10">Fenster schließen</button>
               </form>
             </div>
           </article>
